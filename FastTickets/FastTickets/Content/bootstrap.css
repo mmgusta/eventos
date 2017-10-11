@@ -238,9 +238,9 @@ th {
   h3 {
     page-break-after: avoid;
   }
-  .navbar {
+  .fundo-navbar {
     display: none;
-    background-color: lightblue;
+    background-color: lightcoral;
     font-size: 18px;
   }
   .btn > .caret,

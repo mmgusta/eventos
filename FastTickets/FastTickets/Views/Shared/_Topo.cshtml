@@ -1,7 +1,15 @@
 ﻿<!DOCTYPE html>
 <html>
-
-    <div class="container">
-        <nav class ="navbar" style="font-size: 18px">Site</nav>
-    </div>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="fundo-navbar">
+        <div class="container">
+            @Html.ActionLink("Home","Index","")
+            @Html.ActionLink("Cadastrar Evento", "Index", "Evento")
+            @Html.ActionLink("Cadastrar Local", "Index", "Local")
+        </div>
+    </nav>
+</body>
 </html>
