@@ -13,7 +13,7 @@ namespace FastTickets.Controllers
         //
         // GET: /LocalEvento/
 
-        private EFContexto context = new EFContexto();
+       private EFContexto context = new EFContexto();
 
 
         public ActionResult Index()
@@ -21,7 +21,7 @@ namespace FastTickets.Controllers
             return View();
         }
 
-        [HttpPost]
+       [HttpPost]
         public ActionResult Index(LocalEventoModel local)
         {
 

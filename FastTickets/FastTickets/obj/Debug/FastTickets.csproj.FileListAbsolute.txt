@@ -2,6 +2,7 @@ C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\FastTickets.d
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\FastTickets.pdb
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\Antlr3.Runtime.dll
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\EntityFramework.dll
+C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\EntityFramework.SqlServer.dll
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\Newtonsoft.Json.dll
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\System.Web.Mvc.dll
@@ -13,12 +14,12 @@ C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\System.Web.We
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\System.Web.WebPages.Razor.dll
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\WebGrease.dll
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\EntityFramework.xml
+C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\EntityFramework.SqlServer.xml
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\Newtonsoft.Json.xml
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\System.Web.Mvc.xml
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\System.Web.Razor.xml
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\System.Web.WebPages.xml
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\System.Web.WebPages.Deployment.xml
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\bin\System.Web.WebPages.Razor.xml
-C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\obj\Debug\FastTickets.csprojResolveAssemblyReference.cache
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\obj\Debug\FastTickets.dll
 C:\Users\re035439\Documents\VSProjects\FastTickets\FastTickets\obj\Debug\FastTickets.pdb

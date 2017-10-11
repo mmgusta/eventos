@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
 namespace FastTickets.Models
 {
-
+    
     [Table("LOCAL_EVENTO")]
     public class LocalEventoModel
     {

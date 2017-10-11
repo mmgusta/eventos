@@ -8,7 +8,7 @@ namespace FastTickets.Context
 {
     public class EFContexto : DbContext
     {
-        public	EFContexto()	:	base("Servidor")	
+        public	EFContexto()	:	base("name = Servidor")	
         {
 
         }
@@ -16,7 +16,7 @@ namespace FastTickets.Context
 
         public DbSet<LocalEventoModel> LocalEvento { get; set; }
         public DbSet<CadastroEventoModel> Evento { get; set; }
-
+        
 
     }
 }

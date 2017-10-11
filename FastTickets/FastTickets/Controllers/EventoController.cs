@@ -13,7 +13,7 @@ namespace FastTickets.Controllers
         //
         // GET: /Evento/
 
-        private EFContexto context = new EFContexto();
+        //private EFContexto context = new EFContexto();
 
         public ActionResult Index()
         {
