@@ -1,0 +1,52 @@
+﻿@model FastTickets.Models.CadastroEventoModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Cadastro de Eventos</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NomeEvento)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NomeEvento)
+            @Html.ValidationMessageFor(model => model.NomeEvento)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataEvento)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataEvento)
+            @Html.ValidationMessageFor(model => model.DataEvento)
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Promoter.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Promoter.Nome)
+            @Html.ValidationMessageFor(model => model.Promoter.Nome)
+        </div>
+
+       
+
+        <p>
+            <input type="submit" value="Cadastrar" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
