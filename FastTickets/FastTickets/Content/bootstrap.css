@@ -11,6 +11,8 @@ html {
 }
 body {
   margin: 0;
+  background-image: url("/Content/fundo/bg.jpg");
+  color: white;
 }
 article,
 aside,
@@ -44,6 +46,7 @@ template {
 }
 a {
   background-color: transparent;
+  color: white;
 }
 a:active,
 a:hover {
@@ -237,6 +240,7 @@ th {
   h2,
   h3 {
     page-break-after: avoid;
+    color: white;
   }
   .navbar {
     display: none;
@@ -250,6 +254,7 @@ th {
   }
   .label {
     border: 1px solid #000;
+    color: white;
   }
   .table {
     border-collapse: collapse !important;
@@ -1100,7 +1105,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #fff;
   text-decoration: none;
 }
 a:hover,
@@ -1189,7 +1194,7 @@ h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit;
+  color: white;
 }
 h1 small,
 h2 small,
@@ -2267,6 +2272,7 @@ th {
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px;
+  color: white;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -2504,7 +2510,7 @@ legend {
   margin-bottom: 20px;
   font-size: 21px;
   line-height: inherit;
-  color: #333;
+  color: white;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -2513,6 +2519,7 @@ label {
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
+  color: white;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
@@ -4185,9 +4192,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 24px;
   text-align: center;
    background-color:black;
-    position: relative;
     min-height: 50px;
     padding-top: 7.5px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 @media (min-width: 768px) {
   .navbar {
