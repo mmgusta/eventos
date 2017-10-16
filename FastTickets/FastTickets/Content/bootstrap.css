@@ -238,11 +238,12 @@ th {
   h3 {
     page-break-after: avoid;
   }
-  /*.navbar {
+  .navbar {
     display: none;
     background-color: lightcoral;
     font-size: 18px;
-  }*/
+ 
+  }
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;
@@ -4166,10 +4167,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
 }
 .navbar {
+  background-color:lightblue;
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
-  background-color: lightcoral;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -4592,7 +4593,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
+  background-color: lightcoral;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
