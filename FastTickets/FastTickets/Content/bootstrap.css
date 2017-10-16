@@ -2551,7 +2551,7 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: auto;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -4166,12 +4166,30 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.navbar {
-  background-color:lightblue;
+.navbar{
+  background-color:black;
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
+  padding-left:50%;
+  padding-top: 5px;
+  color:white;
+  font-size: 28px;
+
+}
+.navbar a {
+    color: white;
+    font-size: 28px; 
+}
+
+.rodape {
+    color: white;
+  font-size: 24px;
+  text-align: center;
+   background-color:black;
+    position: relative;
+    min-height: 50px;
+    padding-top: 7.5px;
 }
 @media (min-width: 768px) {
   .navbar {
