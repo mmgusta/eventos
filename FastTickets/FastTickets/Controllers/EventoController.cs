@@ -23,6 +23,9 @@ namespace FastTickets.Controllers
             return View();
         }
 
+       
+
+
         [HttpPost]
         public ActionResult Index(CadastroEventoModel evento)
         {

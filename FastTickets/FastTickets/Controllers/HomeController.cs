@@ -26,5 +26,26 @@ namespace FastTickets.Controllers
             return View(lista);
         }
 
+        public ActionResult Editar(int id)
+        {
+            CadastroEventoModel evento = new EventoDAL().ConsultarId(id);
+            return View(evento);
+        }
+
+        [HttpPost]
+        public ActionResult Editar(CadastroEventoModel evento)
+        {
+            context.SaveChanges();
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Index(string nome)
+        {
+           IList<CadastroEventoModel> evento = new EventoDAL().ConsultarNome(nome);
+            return View(evento);
+        }
+
     }
 }

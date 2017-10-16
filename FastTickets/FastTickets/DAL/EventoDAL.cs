@@ -17,5 +17,28 @@ namespace FastTickets.DAL
 
         }
 
+        public IList<CadastroEventoModel> ConsultarNome(string nome)
+        {
+
+            return new EFContexto().Evento.Where<CadastroEventoModel>(e => e.Nome == nome).ToList();
+        }
+
+        public CadastroEventoModel ConsultarId(int id)
+        {
+            return new EFContexto().Evento.FirstOrDefault<CadastroEventoModel>(e => e.EventoId == id);
+        }
+
+    /*    public void Editar(CadastroEventoModel evento)
+        {
+            using (EFContexto contexto= new EFContexto())
+            {
+                CadastroEventoModel cad = contexto.Evento.Single(e => e.EventoId == evento.EventoId);
+                cad = evento;
+                contexto.SaveChanges();
+
+            }
+
+        }*/
+
     }
 }

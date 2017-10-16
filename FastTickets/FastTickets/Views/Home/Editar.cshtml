@@ -1,14 +1,18 @@
 ﻿@model FastTickets.Models.CadastroEventoModel
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Editar";
 }
 
-@using (Html.BeginForm("Index")) {
+<h2>Editar</h2>
+
+@using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Cadastro de Eventos</legend>
+        <legend>CadastroEventoModel</legend>
+
+        @Html.HiddenFor(model => model.EventoId)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Nome)
@@ -26,24 +30,22 @@
             @Html.ValidationMessageFor(model => model.Data)
         </div>
 
-        <div class="editor-field">
-            @Html.Label("Local do Evento")
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LocalId)
         </div>
         <div class="editor-field">
-            @Html.DropDownList("LocalId", null, htmlAttributes: new { @class = "form-control" })
-            @Html.ActionLink("Cadastrar Local", "Index", "LocalEvento")
+            @Html.EditorFor(model => model.LocalId)
+            @Html.ValidationMessageFor(model => model.LocalId)
         </div>
-
-       
 
         <p>
-            <input type="submit" value="Cadastrar" class="btn"/>
+            <input type="submit" value="Save" />
         </p>
     </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Voltar a Home", "Index", "")
+    @Html.ActionLink("Voltar a Home", "Index")
 </div>
 
 @section Scripts {

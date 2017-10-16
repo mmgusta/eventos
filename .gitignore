@@ -3,3 +3,7 @@ bin/
 
 *.suo
 *.cache
+*.suo
+*.dll
+*.dll
+*.pdb

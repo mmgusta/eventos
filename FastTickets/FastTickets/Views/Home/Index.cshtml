@@ -4,7 +4,17 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Home</h2>
+<div>
+   @using (Html.BeginForm("Index","Home", FormMethod.Post))
+   {
+       @Html.ValidationSummary(true)
+       @Html.TextBox("nome", null, new {@class = "input-sm"})
+       <input type="submit" value="Pesquisar" class="btn"/>
+   }
+
+</div>
+
+
 
 
 <div class="editor-field">
@@ -26,7 +36,10 @@
                      <td>
                         @evento.LocalEvento.Nome
                     </td>
-                    
+                    <td>
+                        @Html.ActionLink("Editar", "Editar", new { id=evento.EventoId})
+                          @Html.ActionLink("Excluir", "Excluir", new { id=evento.EventoId})
+                    </td>
                                         
                     
             </tr>   
