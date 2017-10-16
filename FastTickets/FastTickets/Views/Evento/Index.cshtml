@@ -11,23 +11,23 @@
         <legend>Cadastro de Eventos</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.NomeEvento)
+            @Html.LabelFor(model => model.Nome)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.NomeEvento)
-            @Html.ValidationMessageFor(model => model.NomeEvento)
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataEvento)
+            @Html.LabelFor(model => model.Data)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataEvento)
-            @Html.ValidationMessageFor(model => model.DataEvento)
+            @Html.EditorFor(model => model.Data)
+            @Html.ValidationMessageFor(model => model.Data)
         </div>
 
         <div class="editor-field">
-            Nome do Evento
+            @Html.Label("Local do Evento")
         </div>
         <div class="editor-field">
             @Html.DropDownList("LocalId", null, htmlAttributes: new { @class = "form-control" })
@@ -37,7 +37,7 @@
        
 
         <p>
-            <input type="submit" value="Cadastrar" />
+            <input type="submit" value="Cadastrar" class="btn"/>
         </p>
     </fieldset>
 }

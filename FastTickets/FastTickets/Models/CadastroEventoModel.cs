@@ -16,13 +16,13 @@ namespace FastTickets.Models
         [Column("eventoID")]
         public int EventoId { get; set; }
 
-        [Column("nomeEvento")]
+        [Column("nome")]
         [DisplayName("Nome do Evento")]
-        public string NomeEvento { get; set; }
+        public string Nome { get; set; }
 
-        [Column("dataEvento")]
+        [Column("data")]
         [DisplayName("Data do Evento")]
-        public DateTime DataEvento { get; set; }
+        public DateTime Data { get; set; }
 
 
         [Column("localid")]
