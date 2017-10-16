@@ -16,6 +16,7 @@ namespace FastTickets.Models
         public int LocalId { get; set; }
 
         [Column("nome")]
+        [DisplayName("Local do Evento")]
         public string Nome { get; set; }
 
         [Column("endereco")]

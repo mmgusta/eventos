@@ -1,5 +1,12 @@
-﻿@{
+﻿@model FastTickets.Models.CadastroEventoModel
+
+@{
     ViewBag.Title = "Index";
 }
 
 <h2>Home</h2>
+
+
+<div class="editor-field">
+            @Html.DropDownList("EventoId", null, htmlAttributes: new { @class = "form-control" })
+</div>

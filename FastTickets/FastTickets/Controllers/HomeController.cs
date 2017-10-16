@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FastTickets.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,14 @@ namespace FastTickets.Controllers
         //
         // GET: /Home/
 
+        private EFContexto context = new EFContexto();
+
+
         public ActionResult Index()
         {
+
+            ViewBag.EventoId = new SelectList(context.Evento.ToList(), "EventoId", "NomeEvento"); 
+
             return View();
         }
 

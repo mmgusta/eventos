@@ -18,7 +18,7 @@ namespace FastTickets.Controllers
         public ActionResult Index()
         {
            
-            ViewBag.Locais = new SelectList(context.LocalEvento.ToList(), "LocalId", "Nome");            
+            ViewBag.LocalId = new SelectList(context.LocalEvento.ToList(), "LocalId", "Nome");            
 
             return View();
         }
@@ -26,9 +26,11 @@ namespace FastTickets.Controllers
         [HttpPost]
         public ActionResult Index(CadastroEventoModel evento)
         {
-
+            
             context.Evento.Add(evento);
             context.SaveChanges();
+
+            ViewBag.LocalId = new SelectList(context.LocalEvento.ToList(), "LocalId", "Nome");
 
             return View();
         }

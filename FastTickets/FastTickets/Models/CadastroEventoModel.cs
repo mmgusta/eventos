@@ -13,22 +13,25 @@ namespace FastTickets.Models
     public class CadastroEventoModel
     {
         [Key]
+        [Column("eventoID")]
         public int EventoId { get; set; }
 
+        [Column("nome")]
         [DisplayName("Nome do Evento")]
         public string NomeEvento { get; set; }
 
+        [Column("data")]
         [DisplayName("Data do Evento")]
         public DateTime DataEvento { get; set; }
 
+
+        [Column("localid")]
         [DisplayName("Local do Evento")]
         public int LocalId { get; set; }
 
 
 
-        public virtual LocalEventoModel LocalEvento { get; set; }
-
-        public virtual  PromoterModel Promoter { get; set; }
+        //public virtual LocalEventoModel LocalEvento { get; set; }
 
 
     }
