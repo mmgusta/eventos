@@ -13,10 +13,23 @@ namespace FastTickets.Controllers
         //
         // GET: /Evento/
 
-        //private EFContexto context = new EFContexto();
+        private EFContexto context = new EFContexto();
 
         public ActionResult Index()
         {
+           
+            ViewBag.Locais = new SelectList(context.LocalEvento.ToList(), "LocalId", "Nome");            
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(CadastroEventoModel evento)
+        {
+
+            context.Evento.Add(evento);
+            context.SaveChanges();
+
             return View();
         }
 

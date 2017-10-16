@@ -24,8 +24,7 @@ namespace FastTickets.Models
         [DisplayName("Local do Evento")]
         public int LocalId { get; set; }
 
-        [DisplayName("Promoter do Evento")]
-        public int PromoterId { get; set; }
+
 
         public virtual LocalEventoModel LocalEvento { get; set; }
 
