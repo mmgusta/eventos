@@ -17,6 +17,8 @@ namespace FastTickets.Models
         public int EventoId { get; set; }
 
         [Column("nome")]
+        [Required(ErrorMessage = "Digite o nome do Evento")]
+        [StringLength(100, ErrorMessage = "O nome deve ter entre 1-100 caracteres")]
         [DisplayName("Nome do Evento")]
         public string Nome { get; set; }
 
