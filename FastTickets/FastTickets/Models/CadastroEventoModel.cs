@@ -31,7 +31,7 @@ namespace FastTickets.Models
 
 
 
-    //    public virtual List<LocalEventoModel> LocalEvento { get; set; }
+        public virtual LocalEventoModel LocalEvento { get; set; }
 
 
     }
