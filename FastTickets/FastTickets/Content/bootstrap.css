@@ -11,8 +11,8 @@ html {
 }
 body {
   margin: 0;
-  background-image: url("/Content/fundo/bg.jpg");
-  color: white;
+  background-image: url("/Content/fundo/bg2.jpg");
+  background-size: 100%;
 }
 article,
 aside,
