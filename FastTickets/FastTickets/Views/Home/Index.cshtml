@@ -1,4 +1,4 @@
-﻿@model FastTickets.Models.CadastroEventoModel
+﻿@model IEnumerable<FastTickets.Models.CadastroEventoModel>
 
 @{
     ViewBag.Title = "Index";
@@ -8,5 +8,33 @@
 
 
 <div class="editor-field">
-            @Html.DropDownList("EventoId", null, htmlAttributes: new { @class = "form-control" })
+    <table class="table">
+        <tr>
+            <th>Nome do Evento</th>
+            <th>Data do Evento</th>
+            <th>Local do Evento</th>
+        </tr>
+        <tbody>
+           @foreach (var evento in Model){
+            <tr>
+                    <td>
+                        @evento.NomeEvento
+                    </td>
+                     <td>
+                        @evento.DataEvento
+                    </td>
+                     <td>
+                        @evento.EventoId
+                    </td>
+                    
+                                        
+                    
+            </tr>   
+            }
+        </tbody>
+
+    </table>
+
+
+
 </div>

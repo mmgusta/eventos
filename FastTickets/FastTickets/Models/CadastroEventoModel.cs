@@ -16,11 +16,11 @@ namespace FastTickets.Models
         [Column("eventoID")]
         public int EventoId { get; set; }
 
-        [Column("nome")]
+        [Column("nomeEvento")]
         [DisplayName("Nome do Evento")]
         public string NomeEvento { get; set; }
 
-        [Column("data")]
+        [Column("dataEvento")]
         [DisplayName("Data do Evento")]
         public DateTime DataEvento { get; set; }
 
@@ -31,7 +31,7 @@ namespace FastTickets.Models
 
 
 
-        //public virtual LocalEventoModel LocalEvento { get; set; }
+    //    public virtual List<LocalEventoModel> LocalEvento { get; set; }
 
 
     }
