@@ -8,9 +8,8 @@
 
     <h2>Exclusão</h2>
 
-    <h3>Voce tem certeza que deseja excluir isso?</h3>
+    <h3>Você tem certeza que deseja excluir este evento?</h3>
     <div>
-        <h4>Dados do Evento</h4>
         <hr />
         <dl class="dl-horizontal">
             <dt>@Html.DisplayNameFor(model => model.Nome)
@@ -26,8 +25,9 @@
             <dd>@Html.DisplayFor(model => model.LocalEvento.Nome)
         </dl>
 
+        @*<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />*@
 
-
+        <div class="excluir-btn"></div>
         @using (Html.BeginForm())
         {
            
@@ -36,11 +36,11 @@
             </div>
         }
 
-
+        <br />
         <div>
             @Html.ActionLink("Voltar para os Eventos", "Index", "Home", new { @class = "btn" })
         </div>
-
+        </div>
 
     </div>
 </div>

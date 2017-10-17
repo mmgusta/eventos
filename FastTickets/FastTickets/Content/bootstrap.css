@@ -5,14 +5,14 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 body {
   margin: 0;
   background-image: url("/Content/fundo/bg2.jpg");
-  background-size: 100%;
+  background-size: cover;
 }
 article,
 aside,
@@ -48,6 +48,7 @@ a {
   background-color: transparent;
   color: white;
   font-size: 16px;
+  font-weight: bold;
 }
 a:active,
 a:hover {
@@ -1468,18 +1469,31 @@ dd {
 }
 @media (min-width: 768px) {
   .dl-horizontal dt {
-    float: left;
-    width: 160px;
-    overflow: hidden;
+    float: none;
+    width: auto;
     clear: left;
-    text-align: right;
+    text-align: left;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: white;
+    text-shadow: 1.5px 1.5px black;
+    font-size: 20px;
   }
   .dl-horizontal dd {
-    margin-left: 180px;
+    float: none;
+    width: auto;
+    clear: left;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+    text-shadow: 2px 1.5px black;
+    font-size: 20px;
   }
-}
+
+    .excluir-btn {
+        float: none;
+    }
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
@@ -2278,9 +2292,12 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: white;
+  background-color: #004d99;
 }
+
+
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
@@ -2290,11 +2307,11 @@ th {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 5px solid #fff;
+  border-top: 2px solid #fff;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 5px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
@@ -3022,13 +3039,14 @@ select[multiple].input-lg {
 .btn {
   -webkit-border-radius: 1;
   -moz-border-radius: 1;
-  border-radius: 0.5px;
+  border-radius: 1px;
   font-family: Arial;
-  color: #ffffff;
+  color: white;
   font-size: 14px;
-  background: #000000;
-  padding: 3px 3px 3px 3px;
+  background: #004d99;
+  padding: 3px 5px 3px 5px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .btn:hover {
@@ -3474,10 +3492,10 @@ fieldset[disabled] .btn-link:focus {
 .btn-block + .btn-block {
   margin-top: 5px;
 }
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
-  width: 100%;
+input[type="submit"].btn,
+input[type="reset"].btn,
+input[type="button"].btn {
+  width: auto;
 }
 .fade {
   opacity: 0;
@@ -4179,7 +4197,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
 }
 .navbar{
-  background-color:black;
+  background-color:#004d99;
   position: relative;
   min-height: 30px;
   margin-bottom: 20px;
@@ -4198,13 +4216,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     color: white;
     font-size: 24px;
     text-align: center;
-    background-color:black;
-    min-height: 30px;
+    background-color:#004d99;
+    //min-height: 30px;
     padding-top: 7.5px;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100%;
 }
+
+
 @media (min-width: 768px) {
   .navbar {
     border-radius: 4px;
