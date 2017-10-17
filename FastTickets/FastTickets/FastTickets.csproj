@@ -130,6 +130,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocalEventoController.cs" />
     <Compile Include="DAL\EventoDAL.cs" />
+    <Compile Include="DAL\LocalEventoDAL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

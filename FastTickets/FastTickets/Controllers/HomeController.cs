@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using FastTickets.DAL;
 using FastTickets.Models;
 
+
 namespace FastTickets.Controllers
 {
     public class HomeController : Controller
@@ -15,7 +16,7 @@ namespace FastTickets.Controllers
         // GET: /Home/
 
         private EFContexto context = new EFContexto();
-        
+
         public ActionResult Index()
         {
 
@@ -29,22 +30,31 @@ namespace FastTickets.Controllers
         public ActionResult Editar(int id)
         {
             CadastroEventoModel evento = new EventoDAL().ConsultarId(id);
+            ViewBag.LocalId = new SelectList(context.LocalEvento.ToList(), "LocalId", "Nome");
             return View(evento);
         }
 
         [HttpPost]
         public ActionResult Editar(CadastroEventoModel evento)
         {
-            context.SaveChanges();
-            return View();
+            ViewBag.LocalId = new SelectList(context.LocalEvento.ToList(), "LocalId", "Nome");
+            EventoDAL DAL = new EventoDAL();
+            DAL.Editar(evento);
+            return RedirectToAction("Index");
         }
 
 
         [HttpPost]
         public ActionResult Index(string nome)
         {
-           IList<CadastroEventoModel> evento = new EventoDAL().ConsultarNome(nome);
-            return View(evento);
+            if (!string.IsNullOrEmpty(nome))
+            {
+                IList<CadastroEventoModel> evento = new EventoDAL().ConsultarNome(nome);
+
+                return View(evento);
+
+            }
+            return RedirectToAction("Index");
         }
 
         public ActionResult Excluir(int id)
@@ -55,8 +65,9 @@ namespace FastTickets.Controllers
 
         [HttpPost, ActionName("Excluir")]
 
-        public ActionResult ExcluirConfirmar(int id)
+        public ActionResult ExcluirConfirmar(int  id)
         {
+
             CadastroEventoModel evento = context.Evento.Find(id);
             context.Evento.Remove(evento);
             context.SaveChanges();

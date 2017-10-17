@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using FastTickets.Context;
@@ -30,26 +31,45 @@ namespace FastTickets.DAL
             return new EFContexto().Evento.FirstOrDefault<CadastroEventoModel>(e => e.EventoId == id);
         }
 
-        /*    public void Editar(CadastroEventoModel evento)
+        public void Editar(CadastroEventoModel evento)
+        {
+            using (EFContexto contexto = new EFContexto())
             {
-                using (EFContexto contexto= new EFContexto())
-                {
-                    CadastroEventoModel cad = contexto.Evento.Single(e => e.EventoId == evento.EventoId);
-                    cad = evento;
-                    contexto.SaveChanges();
 
+                contexto.Entry(evento).State = EntityState.Modified;
+                contexto.SaveChanges();
+
+            }
+
+        }
+        public Boolean Inserir(CadastroEventoModel evento)
+        {
+            using (EFContexto contexto = new EFContexto())
+            {
+
+                if (!contexto.Evento.Any(o => (o.Nome == evento.Nome) && (o.LocalId == evento.LocalId) && (o.Data == evento.Data)))
+                {
+                    contexto.Evento.Add(evento);
+                    contexto.SaveChanges();
+                    return true;
                 }
 
-            }*/
-
-
-        public CadastroEventoModel Excluir(int id)
-        {
-            CadastroEventoModel evento = new EFContexto().Evento.Find(id);
-
-
-            return context.Evento.Remove(evento);
+                return false;
+            }
         }
+
+        //public void Excluir(CadastroEventoModel evento)
+        //{
+
+        //    using (EFContexto contexto = new EFContexto())
+        //    {
+        //        contexto.Entry(evento).State = EntityState.Deleted;
+        //        contexto.SaveChanges();
+
+        //    }
+
+
+        //}
 
     }
 }

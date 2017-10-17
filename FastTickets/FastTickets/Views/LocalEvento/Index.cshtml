@@ -45,7 +45,7 @@
             </p>
         </fieldset>
     }
-
+     @Html.Raw(TempData["msg"])
     <div>
         @Html.ActionLink("Voltar aos Eventos", "Index", "Evento")
     </div>

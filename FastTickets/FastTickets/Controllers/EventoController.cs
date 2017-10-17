@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using FastTickets.Models;
 using FastTickets.Context;
+using FastTickets.DAL;
 
 namespace FastTickets.Controllers
 {
@@ -17,22 +18,31 @@ namespace FastTickets.Controllers
 
         public ActionResult Index()
         {
-           
-            ViewBag.LocalId = new SelectList(context.LocalEvento.ToList(), "LocalId", "Nome");            
+
+            ViewBag.LocalId = new SelectList(context.LocalEvento.ToList(), "LocalId", "Nome");
 
             return View();
         }
 
-       
+
 
 
         [HttpPost]
         public ActionResult Index(CadastroEventoModel evento)
         {
-            
-            context.Evento.Add(evento);
-            context.SaveChanges();
-
+            EventoDAL DAL = new EventoDAL();
+            var sucesso = DAL.Inserir(evento);
+            if (sucesso)
+            {
+                TempData["msg"] = "<script>alert('Evento Cadastrado com sucesso');</script>";
+                
+                ModelState.Clear();
+            }
+            else
+            {
+                TempData["msg"] = "<script>alert('Este evento já existe');</script>";
+                
+            }
             ViewBag.LocalId = new SelectList(context.LocalEvento.ToList(), "LocalId", "Nome");
 
             return View();

@@ -7,3 +7,9 @@ bin/
 *.dll
 *.dll
 *.pdb
+*.suo
+FastTickets/FastTickets.v11.suo
+FastTickets/FastTickets/bin/FastTickets.pdb
+FastTickets/FastTickets/obj/Debug/FastTickets.dll
+FastTickets/FastTickets/obj/Debug/FastTickets.pdb
+FastTickets/FastTickets/bin/FastTickets.pdb

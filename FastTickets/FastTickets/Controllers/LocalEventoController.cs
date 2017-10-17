@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FastTickets.DAL;
 
 namespace FastTickets.Controllers
 {
@@ -25,9 +26,22 @@ namespace FastTickets.Controllers
         public ActionResult Index(LocalEventoModel local)
         {
 
-            context.LocalEvento.Add(local);
-            context.SaveChanges();
+            LocalEventoDAL DAL = new LocalEventoDAL();
+            var sucesso = DAL.Inserir(local);
+            if (sucesso)
+            {
+                TempData["msg"] = "<script>alert('Local Cadastrado com sucesso');</script>";
 
+                ModelState.Clear();
+            }
+            else
+            {
+                TempData["msg"] = "<script>alert('Este local já foi cadastrado');</script>";
+
+            }
+
+
+            ModelState.Clear();
             return View();
         }
 
