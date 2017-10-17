@@ -12,6 +12,9 @@ html {
 body {
   margin: 0;
   background-image: url("/Content/fundo/bg2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
 article,
