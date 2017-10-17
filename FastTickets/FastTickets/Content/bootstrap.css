@@ -1467,28 +1467,32 @@ dt {
 dd {
   margin-left: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .dl-horizontal dt {
     float: none;
     width: auto;
     clear: left;
-    text-align: left;
+    text-align: center;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    //white-space: nowrap;
     color: white;
-    text-shadow: 1.5px 1.5px black;
+    //text-shadow: 1.25px 1.25px #777;
     font-size: 20px;
+    background: #004d99; 
+    border: 1px solid white;
   }
   .dl-horizontal dd {
     float: none;
     width: auto;
     clear: left;
-    text-align: left;
+    text-align: center;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    //white-space: nowrap;
     color: white;
-    text-shadow: 2px 1.5px black;
+    //text-shadow: 2px 1.5px black;
     font-size: 20px;
+    background: #004d99;
+    border: 1px solid white;
   }
 
     .excluir-btn {
@@ -4209,7 +4213,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar a {
     color: white;
-    font-size: 24px; 
+    font-size: x-large; 
 }
 
 .rodape {
@@ -4217,11 +4221,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     font-size: 24px;
     text-align: center;
     background-color:#004d99;
-    //min-height: 30px;
+    min-height: 30px;
     padding-top: 7.5px;
     position: fixed;
     bottom: 0px;
-    width: 100%;
+    width:100%;
 }
 
 
