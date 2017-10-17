@@ -40,8 +40,8 @@
                             @evento.LocalEvento.Nome
                         </td>
                         <td>
-                            @Html.ActionLink("Editar", "Editar", new { id = evento.EventoId })
-                            @Html.ActionLink("Excluir", "Excluir", new { id = evento.EventoId })
+                            @Html.ActionLink("Editar", "Editar", new { id = evento.EventoId }, new { @class="btn" })
+                            @Html.ActionLink("Excluir", "Excluir", new { id = evento.EventoId},new { @class="btn" })
                         </td>
 
 
