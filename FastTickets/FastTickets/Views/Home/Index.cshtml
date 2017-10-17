@@ -4,50 +4,54 @@
     ViewBag.Title = "Index";
 }
 
-<div>
-   @using (Html.BeginForm("Index","Home", FormMethod.Post))
-   {
-       @Html.ValidationSummary(true)
-       @Html.TextBox("nome", null, new {@class = "input-sm"})
-       <input type="submit" value="Pesquisar" class="btn"/>
-   }
+<div class="container">
+    <div>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+            @Html.TextBox("nome", null, new { @class = "input-sm" })
+            <input type="submit" value="Pesquisar" class="btn" />
+        }
 
-</div>
+    </div>
 
 
 
 
-<div class="editor-field">
-    <table class="table">
-        <tr>
-            <th>Nome do Evento</th>
-            <th>Data do Evento</th>
-            <th>Local do Evento</th>
-        </tr>
-        <tbody>
-           @foreach (var evento in Model){
+    <div class="editor-field">
+        <table class="table">
             <tr>
-                    <td>
-                        @evento.Nome
-                    </td>
-                     <td>
-                        @evento.Data.ToShortDateString()
-                    </td>
-                     <td>
-                        @evento.LocalEvento.Nome
-                    </td>
-                    <td>
-                        @Html.ActionLink("Editar", "Editar", new { id=evento.EventoId})
-                          @Html.ActionLink("Excluir", "Excluir", new { id=evento.EventoId})
-                    </td>
-                                        
-                    
-            </tr>   
-            }
-        </tbody>
+                <th>Nome do Evento</th>
+                <th>Data do Evento</th>
+                <th>Local do Evento</th>
+                <th colspan="2"></th>
+            </tr>
+            <tbody>
+                @foreach (var evento in Model)
+                {
+                    <tr>
+                        <td>
+                            @evento.Nome
+                        </td>
+                        <td>
+                            @evento.Data.ToShortDateString()
+                        </td>
+                        <td>
+                            @evento.LocalEvento.Nome
+                        </td>
+                        <td>
+                            @Html.ActionLink("Editar", "Editar", new { id = evento.EventoId })
+                            @Html.ActionLink("Excluir", "Excluir", new { id = evento.EventoId })
+                        </td>
 
-    </table>
+
+                    </tr>   
+                }
+            </tbody>
+
+        </table>
 
 
 
+    </div>
 </div>

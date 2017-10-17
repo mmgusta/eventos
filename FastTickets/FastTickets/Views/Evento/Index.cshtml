@@ -4,48 +4,50 @@
     ViewBag.Title = "Index";
 }
 
-@using (Html.BeginForm("Index")) {
-    @Html.ValidationSummary(true)
+<div class="container">
+    @using (Html.BeginForm("Index"))
+    {
+        @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Cadastro de Eventos</legend>
+        <fieldset>
+            <legend>Cadastro de Eventos</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Nome)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Nome)
-            @Html.ValidationMessageFor(model => model.Nome)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Nome)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Nome)
+                @Html.ValidationMessageFor(model => model.Nome)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Data)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Data)
-            @Html.ValidationMessageFor(model => model.Data)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Data)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Data)
+                @Html.ValidationMessageFor(model => model.Data)
+            </div>
 
-        <div class="editor-field">
-            @Html.Label("Local do Evento")
-        </div>
-        <div class="editor-field">
-            @Html.DropDownList("LocalId", null, htmlAttributes: new { @class = "form-control" })
-            @Html.ActionLink("Cadastrar Local", "Index", "LocalEvento")
-        </div>
+            <div class="editor-field">
+                @Html.Label("Local do Evento")
+            </div>
+            <div class="editor-field">
+                @Html.DropDownList("LocalId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ActionLink("Cadastrar Local", "Index", "LocalEvento")
+            </div>
 
-       
 
-        <p>
-            <input type="submit" value="Cadastrar" class="btn"/>
-        </p>
-    </fieldset>
-}
 
-<div>
-    @Html.ActionLink("Voltar a Home", "Index", "")
+            <p>
+                <input type="submit" value="Cadastrar" class="btn" />
+            </p>
+        </fieldset>
+    }
+
+    <div>
+        @Html.ActionLink("Voltar a Home", "Index", "")
+    </div>
 </div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

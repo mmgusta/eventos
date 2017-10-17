@@ -23,6 +23,8 @@ namespace FastTickets.Models
         public string Nome { get; set; }
 
         [Column("data")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [DisplayName("Data do Evento")]
         public DateTime Data { get; set; }
 
