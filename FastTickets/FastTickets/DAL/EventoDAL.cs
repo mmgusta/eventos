@@ -10,6 +10,8 @@ namespace FastTickets.DAL
     public class EventoDAL
     {
 
+        EFContexto context = new EFContexto();
+
         public IList<CadastroEventoModel> ListarTodos()
         {
             return
@@ -28,17 +30,26 @@ namespace FastTickets.DAL
             return new EFContexto().Evento.FirstOrDefault<CadastroEventoModel>(e => e.EventoId == id);
         }
 
-    /*    public void Editar(CadastroEventoModel evento)
-        {
-            using (EFContexto contexto= new EFContexto())
+        /*    public void Editar(CadastroEventoModel evento)
             {
-                CadastroEventoModel cad = contexto.Evento.Single(e => e.EventoId == evento.EventoId);
-                cad = evento;
-                contexto.SaveChanges();
+                using (EFContexto contexto= new EFContexto())
+                {
+                    CadastroEventoModel cad = contexto.Evento.Single(e => e.EventoId == evento.EventoId);
+                    cad = evento;
+                    contexto.SaveChanges();
 
-            }
+                }
 
-        }*/
+            }*/
+
+
+        public CadastroEventoModel Excluir(int id)
+        {
+            CadastroEventoModel evento = new EFContexto().Evento.Find(id);
+
+
+            return context.Evento.Remove(evento);
+        }
 
     }
 }

@@ -1,0 +1,47 @@
+﻿@model FastTickets.Models.CadastroEventoModel
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+<div class="container">
+
+    <h2>Exclusão</h2>
+
+    <h3>Voce tem certeza que deseja excluir isso?</h3>
+    <div>
+        <h4>Dados do Evento</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>@Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd>@Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt>@Html.DisplayNameFor(model => model.Data)
+            </dt>
+            <dd>@Html.DisplayFor(model => model.Data)
+            </dd>
+            <dt>@Html.DisplayNameFor(model => model.LocalEvento.Nome)
+            </dt>
+            <dd>@Html.DisplayFor(model => model.LocalEvento.Nome)
+        </dl>
+
+
+
+        @using (Html.BeginForm())
+        {
+           
+            <div>
+                <input type="submit" value="Delete" class="btn" />
+            </div>
+        }
+
+
+        <div>
+            @Html.ActionLink("Voltar para os Eventos", "Index", "Home", new { @class = "btn" })
+        </div>
+
+
+    </div>
+</div>
+

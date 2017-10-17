@@ -47,5 +47,21 @@ namespace FastTickets.Controllers
             return View(evento);
         }
 
+        public ActionResult Excluir(int id)
+        {
+            CadastroEventoModel evento = context.Evento.Find(id);
+            return View(evento);
+        }
+
+        [HttpPost, ActionName("Excluir")]
+
+        public ActionResult ExcluirConfirmar(int id)
+        {
+            CadastroEventoModel evento = context.Evento.Find(id);
+            context.Evento.Remove(evento);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
