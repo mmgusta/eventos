@@ -47,6 +47,7 @@ template {
 a {
   background-color: transparent;
   color: white;
+  font-size: 16px;
 }
 a:active,
 a:hover {
@@ -175,6 +176,7 @@ fieldset {
 
 .field-validation-error {
     color: white;
+    text-shadow: 1px 1px #8B0000;
     font-style: oblique;
 }
 legend {
@@ -2564,8 +2566,8 @@ output {
 .form-control {
   display: block;
   width: auto;
-  height: 34px;
-  padding: 6px 12px;
+  height: 24px;
+  padding: 1px 5px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
@@ -3020,19 +3022,19 @@ select[multiple].input-lg {
 .btn {
   -webkit-border-radius: 1;
   -moz-border-radius: 1;
-  border-radius: 1px;
+  border-radius: 0.5px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 14px;
   background: #000000;
-  padding: 5px 10px 5px 10px;
+  padding: 3px 3px 3px 3px;
   text-decoration: none;
 }
 
 .btn:hover {
-  background: black;
+  background: white;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .btn:focus,
 .btn:active:focus,
@@ -4179,25 +4181,25 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar{
   background-color:black;
   position: relative;
-  min-height: 50px;
+  min-height: 30px;
   margin-bottom: 20px;
   padding-left:50%;
   padding-top: 5px;
   color:white;
-  font-size: 28px;
+  font-size: 24px;
 
 }
 .navbar a {
     color: white;
-    font-size: 28px; 
+    font-size: 24px; 
 }
 
 .rodape {
     color: white;
-  font-size: 24px;
-  text-align: center;
-   background-color:black;
-    min-height: 50px;
+    font-size: 24px;
+    text-align: center;
+    background-color:black;
+    min-height: 30px;
     padding-top: 7.5px;
     position: absolute;
     bottom: 0px;

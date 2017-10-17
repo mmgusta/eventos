@@ -4,14 +4,14 @@
     ViewBag.Title = "Editar";
 }
 
-<h2>Editar</h2>
+
 <div class="container">
     @using (Html.BeginForm())
     {
         @Html.ValidationSummary(true)
 
         <fieldset>
-            <legend>CadastroEventoModel</legend>
+            <legend>Editar Evento</legend>
 
             @Html.HiddenFor(model => model.EventoId)
 
@@ -40,7 +40,8 @@
             </div>
 
             <p>
-                <input type="submit" value="Save" />
+                <br />
+                <input type="submit" class="btn"value="Alterar" />
             </p>
         </fieldset>
     }
