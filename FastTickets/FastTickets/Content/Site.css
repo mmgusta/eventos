@@ -27,6 +27,13 @@ textarea {
     min-height: 75px;
 }
 
+.text-box{
+    font-size: .85em !IMPORTANT;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif !IMPORTANT;
+    color: #232323 !IMPORTANT;
+    background-color: #fff !IMPORTANT;
+}
+
 .editor-label {
     margin: 1em 0 0 0;
 }

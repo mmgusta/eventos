@@ -18,7 +18,7 @@
             </dd>
             <dt>@Html.DisplayNameFor(model => model.Data)
             </dt>
-            <dd>@Html.DisplayFor(model => model.Data)
+            <dd>@Html.TextBoxFor(model => model.Data, "{0:dd MM yyyy}", new { @class = "text-box"} )
             </dd>
             <dt>@Html.DisplayNameFor(model => model.LocalEvento.Nome)
             </dt>

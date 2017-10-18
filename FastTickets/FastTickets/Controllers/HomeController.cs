@@ -30,6 +30,7 @@ namespace FastTickets.Controllers
         public ActionResult Editar(int id)
         {
             CadastroEventoModel evento = new EventoDAL().ConsultarId(id);
+           
             ViewBag.LocalId = new SelectList(context.LocalEvento.ToList(), "LocalId", "Nome");
             return View(evento);
         }
@@ -52,7 +53,7 @@ namespace FastTickets.Controllers
                 IList<CadastroEventoModel> evento = new EventoDAL().ConsultarNome(nome);
 
                 return View(evento);
-
+                
             }
             return RedirectToAction("Index");
         }
