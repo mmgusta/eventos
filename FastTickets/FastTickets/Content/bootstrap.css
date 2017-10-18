@@ -17,6 +17,12 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+.Data {
+    border: none;
+    background: #004d99;
+    text-align: center;
+}
 article,
 aside,
 details,
